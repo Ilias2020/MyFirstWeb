@@ -11,12 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
 
-    @Autowired
-    private PostRepo postRepo;
+
     @GetMapping("/")
     public String home(Model model) {
-        Iterable<Post> posts = postRepo.findAll();
-        model.addAttribute("posts", posts);
         model.addAttribute("title", "Main home page");
         return "home";
     }
