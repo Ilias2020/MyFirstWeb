@@ -11,11 +11,11 @@
 
 <div class="container mt-5 mb-5">
     <h1>Edit</h1>
-    <div th:each="el : ${posts}">
+    <div th:each="el : ${post}" class="alert alert-info mt-2">
         <form method="post">
             <input type="text" th:value="${el.title}" name="title" placeholder="Write something" class="form-control"><br>
             <input type="text" th:value="${el.anons}" name="anons" placeholder="Write something" class="form-control"><br>
-            <textarea name="full_text" th:value="${el.full_text}" placeholder="Write something" class="form-control"></textarea><br>
+            <textarea name="full_text"  placeholder="Write something" class="form-control" th:text="${el.full_text}"/><br>
             <button type="submit" class="btn btn-success">Edit</button>
         </form>
     </div>

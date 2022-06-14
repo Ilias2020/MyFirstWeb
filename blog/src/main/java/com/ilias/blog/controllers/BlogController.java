@@ -57,4 +57,6 @@ public class BlogController {
         model.addAttribute("post", res);
         return "blog-edit";
     }
+
+
 }
