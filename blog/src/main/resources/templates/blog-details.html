@@ -14,7 +14,7 @@
     <h1 th:text="${el.title}"></h1>
     <p th:text="${el.full_text}"/>
     <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a>
-    <form th:action="'/blog/' + ${el.id} + '/remove'" metod="post">
+    <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
       <button class="btn btn-warning" type="submit">Delete</button>
     </form>
   </div>
